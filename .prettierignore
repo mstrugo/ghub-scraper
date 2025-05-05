@@ -1,0 +1,16 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+.next
+package-lock.json
+/CODEOWNERS
+deploy
+CHANGELOG.md
+cdk
+
+/.nx/cache
+.eslintrc.json
+
+# documentation navigation control
+_meta.json
