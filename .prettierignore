@@ -1,15 +1,15 @@
 # Add files here to ignore them from prettier formatting
-
+node_modules/
 /dist
 /coverage
 .next
+.vscode
 package-lock.json
 /CODEOWNERS
 deploy
 CHANGELOG.md
 cdk
 
-/.nx/cache
 .eslintrc.json
 
 # documentation navigation control
