@@ -12,9 +12,3 @@ export const listItemStyle = ({ palette, shape }: Theme) => ({
 export const actionableStyle = ({ spacing }: Theme) => ({
   paddingY: spacing(1.5),
 });
-
-export const textOverflowStyle = {
-  textOverflow: 'ellipsis',
-  overflow: 'hidden',
-  whiteSpace: 'nowrap',
-};

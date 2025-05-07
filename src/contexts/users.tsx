@@ -1,7 +1,6 @@
 'use client';
 
 import { useGetUsers } from 'hooks/api/useGetUsers';
-import { useFavorites } from 'hooks/useFavorites';
 import { useSearch } from 'hooks/useSearch';
 import { createContext, type FC, useContext } from 'react';
 import type { UserContextProviderPropsType, UserContextType } from 'types/userContext';
@@ -11,7 +10,6 @@ export const UserContext = createContext<UserContextType | undefined>(undefined)
 export const UserContextProvider: FC<UserContextProviderPropsType> = ({ children }) => {
   const { users, isLoadingUsers } = useGetUsers();
   const { isSearchPerformed, isSearching, resetSearch, searchResults, triggerSearch } = useSearch();
-  const { handleFavUser, isFavUser } = useFavorites();
 
   const contextValue: UserContextType = {
     initialData: users ?? [],
@@ -21,8 +19,6 @@ export const UserContextProvider: FC<UserContextProviderPropsType> = ({ children
     isSearchPerformed,
     triggerSearch,
     resetSearch,
-    handleFavUser,
-    isFavUser,
   };
 
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;

@@ -1,6 +1,7 @@
 import { Theme } from '@mui/material';
+import { changeScrollbarStyle } from 'utils/changeScrollbarStyle';
 
-export const listStyle = ({ palette, spacing, shape }: Theme) => ({
+export const listStyle = ({ palette, spacing }: Theme) => ({
   display: 'flex',
   gap: spacing(3),
   padding: spacing(2),
@@ -10,15 +11,5 @@ export const listStyle = ({ palette, spacing, shape }: Theme) => ({
   overflowY: 'auto',
   overflowX: 'hidden',
 
-  '&::-webkit-scrollbar': {
-    width: '8px',
-    background: palette.grey[800],
-  },
-  '&::-webkit-scrollbar-thumb': {
-    background: palette.grey[600],
-    borderRadius: shape.borderRadius,
-    '&:hover': {
-      background: palette.grey[500],
-    },
-  },
+  ...changeScrollbarStyle(palette.grey[800], palette.grey[600], palette.grey[500]),
 });

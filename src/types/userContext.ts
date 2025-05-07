@@ -9,8 +9,6 @@ export type UserContextType = {
   isSearchPerformed: boolean;
   triggerSearch: (term: string) => void;
   resetSearch: () => void;
-  handleFavUser: (userId: string) => void;
-  isFavUser: (userId: string) => boolean;
 };
 
 export type UserContextProviderPropsType = {

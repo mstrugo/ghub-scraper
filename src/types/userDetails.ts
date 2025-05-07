@@ -26,6 +26,8 @@ export type GHParsedUserDetails = Omit<ExtractedUserDetails, 'repos_url'> & {
   repositories: ParsedRepositories[];
 };
 
+export type UserDetails = Omit<GHParsedUserDetails, 'repositories' | 'public_repos'>;
+
 export type UserLinks = 'personal' | 'profile';
 
 export type UserLinksToParse = {

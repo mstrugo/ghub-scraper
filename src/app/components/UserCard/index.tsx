@@ -1,12 +1,13 @@
-import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
-import type { GHParsedUserDetails } from 'types/userDetails';
+import { Card, CardActions, CardContent } from '@mui/material';
+import type { UserDetails } from 'types/userDetails';
 import { generateUserExternalLinks } from 'utils';
 import { UserCardActions } from '../UserCardActions';
 import { UserCardContent } from '../UserCardContent';
 import { UserCardHeader } from '../UserCardHeader';
+import { UserCardImage } from '../UserCardImage';
 
 type CardProps = {
-  data: GHParsedUserDetails;
+  data: UserDetails;
 };
 
 export const UserCard = ({ data }: CardProps) => {
@@ -15,7 +16,7 @@ export const UserCard = ({ data }: CardProps) => {
 
   return (
     <Card variant="outlined">
-      <CardMedia component="img" alt={name || login} height="240" image={avatar_url} />
+      <UserCardImage src={avatar_url} alt={name || login} username={login} />
       <CardContent>
         <UserCardHeader fullname={name} username={login} biography={bio} />
         <UserCardContent
