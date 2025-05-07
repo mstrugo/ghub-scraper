@@ -9,8 +9,8 @@ import type { PropsWithChildren } from 'react';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | GitHub Scraper Challenge App',
-    default: 'Home',
+    template: '%s | GitHub Scraper App',
+    default: 'Home | GitHub Scraper App',
   },
   description: 'Scrape GitHub Users and display them in a user-friendly way.',
 };
