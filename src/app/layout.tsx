@@ -20,7 +20,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang={DEFAULT_LANGUAGE}>
       <body style={{ background: '#121212' }}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={theme} defaultMode="dark">
             <CssBaseline />
             <Grid
               component="main"
