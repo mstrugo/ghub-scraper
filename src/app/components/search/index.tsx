@@ -16,14 +16,7 @@ export const Search = () => {
   };
 
   return (
-    <Box
-      maxWidth={400}
-      component="form"
-      display="flex"
-      alignItems="start"
-      gap={1}
-      onSubmit={handleSubmit}
-      onReset={resetSearch}>
+    <Box component="form" display="flex" alignItems="start" gap={1} onSubmit={handleSubmit} onReset={resetSearch}>
       <TextField
         variant="outlined"
         label="Search Users"

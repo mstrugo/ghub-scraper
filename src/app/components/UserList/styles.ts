@@ -8,6 +8,7 @@ export const listStyle = ({ palette, spacing, shape }: Theme) => ({
   flexWrap: 'wrap',
   height: '100%',
   overflowY: 'auto',
+  overflowX: 'hidden',
 
   '&::-webkit-scrollbar': {
     width: '8px',
