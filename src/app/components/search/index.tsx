@@ -28,17 +28,17 @@ export const Search = () => {
         value={term}
       />
 
-      <Tooltip title="Search" placement="top" arrow>
-        <IconButton color="warning" type="submit" aria-label="search" disabled={!term.trim()}>
+      <IconButton color="warning" type="submit" aria-label="search" disabled={!term.trim()}>
+        <Tooltip title="Search" placement="top" arrow>
           <SearchIcon />
-        </IconButton>
-      </Tooltip>
+        </Tooltip>
+      </IconButton>
 
-      <Tooltip title="Clear Search Results" placement="top" arrow>
-        <IconButton color="error" type="reset" aria-label="clear search results" disabled={!isSearchPerformed}>
+      <IconButton color="error" type="reset" aria-label="clear search results" disabled={!isSearchPerformed}>
+        <Tooltip title="Clear Search Results" placement="top" arrow>
           <CancelIcon />
-        </IconButton>
-      </Tooltip>
+        </Tooltip>
+      </IconButton>
     </Box>
   );
 };

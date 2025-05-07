@@ -27,14 +27,14 @@ const RootLayout = ({ children }: PropsWithChildren) => {
               container
               gap={4}
               direction="column"
-              justifyContent="space-between"
+              // justifyContent="space-between"
               alignItems="center"
               maxWidth="lg"
               margin="0 auto"
-              overflow="hidden"
+              // overflow="hidden"
               height="100vh"
               wrap="nowrap"
-              padding={{ xs: 3, md: 8 }}>
+              padding={{ xs: 2, sm: 4, md: 6, lg: 8 }}>
               {children}
             </Grid>
           </ThemeProvider>

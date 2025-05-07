@@ -8,21 +8,12 @@ import { listStyle } from './styles';
 
 interface UserListProps {
   data: GHUserList;
-  isFavorite: (userId: string) => boolean;
-  handleFavClick: (userId: string) => void;
 }
 
-export const UserList = ({ data, isFavorite, handleFavClick }: UserListProps) => (
+export const UserList = ({ data }: UserListProps) => (
   <List sx={listStyle}>
     {data.map(({ login, avatar_url }) => (
-      <UserListItem
-        key={login}
-        avatarSrc={avatar_url}
-        name={login}
-        isFav={isFavorite(login)}
-        onFavClickAction={handleFavClick}
-        profileUrl={generateProfileDetailsUrl(login)}
-      />
+      <UserListItem key={login} avatarSrc={avatar_url} name={login} profileUrl={generateProfileDetailsUrl(login)} />
     ))}
   </List>
 );

@@ -7,13 +7,17 @@ export const boxStyle = ({ palette, spacing, breakpoints }: Theme) => ({
   gap: spacing(3),
   justifyContent: 'center',
   overflowY: 'hidden',
-  height: '40vh',
+  height: '45vh',
 
   [breakpoints.up('sm')]: {
-    height: '46vh',
+    height: '68vh',
   },
 
   [breakpoints.up('md')]: {
-    height: '36vh',
+    height: '59vh',
+  },
+
+  [breakpoints.up('lg')]: {
+    height: '55vh',
   },
 });

@@ -1,4 +1,5 @@
 export * from './FavoriteButton';
+export * from './HeaderNavigation';
 export * from './ListItemText';
 export * from './NotFound';
 export * from './search';

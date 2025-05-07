@@ -1,20 +1,11 @@
 import { Box, Button, CircularProgress, Typography } from '@mui/material';
-// import { GHUserList } from 'types/github';
 import { useUserContext } from 'contexts/users';
 import { UserList } from '~components';
 import { boxStyle } from './styles';
 
 export const UserListContainer = () => {
-  const {
-    initialData,
-    isLoadingInitialData,
-    isSearchPerformed,
-    isSearching,
-    searchResults,
-    resetSearch,
-    isFavUser,
-    handleFavUser,
-  } = useUserContext();
+  const { initialData, isLoadingInitialData, isSearchPerformed, isSearching, searchResults, resetSearch } =
+    useUserContext();
 
   const getContent = () => {
     if (isLoadingInitialData || isSearching) {
@@ -36,7 +27,7 @@ export const UserListContainer = () => {
 
     const data = isSearchPerformed ? searchResults : initialData;
 
-    return <UserList data={data} isFavorite={isFavUser} handleFavClick={handleFavUser} />;
+    return <UserList data={data} />;
   };
 
   return (

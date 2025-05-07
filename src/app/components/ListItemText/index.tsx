@@ -13,6 +13,9 @@ export const ListItemText = ({ text, fontVariant = 'h6', fontWeight = 500, compo
   return (
     <MuiListItemText
       sx={textOverflowStyle}
+      slotProps={{
+        primary: { sx: textOverflowStyle },
+      }}
       primary={
         <Typography variant={fontVariant} component={component} fontWeight={fontWeight}>
           {text}

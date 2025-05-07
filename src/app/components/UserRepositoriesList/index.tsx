@@ -11,8 +11,8 @@ type UserRepositoriesListProps = {
 
 export const UserRepositoriesList = ({ data, amount }: UserRepositoriesListProps) => {
   return (
-    <Box height="100%">
-      <Typography variant="h3" component="h3" gutterBottom>
+    <Box height="100%" maxHeight={{ xs: 350, sm: '80vh', lg: '76vh' }} paddingBottom={{ xs: 2, md: 0 }}>
+      <Typography variant="h4" component="h3" gutterBottom>
         Repositories ({amount})
       </Typography>
       <List disablePadding dense sx={listStyle}>
@@ -20,7 +20,6 @@ export const UserRepositoriesList = ({ data, amount }: UserRepositoriesListProps
           <ListItem key={url} disableGutters sx={hoverableElementStyle}>
             <ListItemButton component="a" href={url} target="_blank" rel="noopener noreferrer">
               <ListItemText text={name} fontWeight={700} fontVariant="body1" />
-
               <Tooltip title="Open in a new tab" placement="top" arrow>
                 <OpenInNewRoundedIcon />
               </Tooltip>
