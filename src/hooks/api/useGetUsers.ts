@@ -3,9 +3,7 @@ import useSWRImmutable from 'swr/immutable';
 import { fetcherFn } from 'utils';
 
 export const useGetUsers = () => {
-  const { data, isLoading, error } = useSWRImmutable([API.USERS.KEY, API.USERS.ENDPOINT], ([_key, endpoint]) =>
-    fetcherFn(endpoint),
-  );
+  const { data, isLoading, error } = useSWRImmutable(API.USERS, fetcherFn);
 
   return {
     users: data,

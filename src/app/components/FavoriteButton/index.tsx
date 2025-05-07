@@ -21,6 +21,7 @@ export const FavoriteButton = ({ username }: FavoriteButtonProps) => {
     };
 
     check();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleFavClick = async (e: React.MouseEvent) => {

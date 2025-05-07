@@ -4,7 +4,7 @@ import type { GHParsedUserDetails, ParsedRepositories } from 'types/userDetails'
 import { extractUserData, extractUserRepositories, fetcherFn } from 'utils';
 
 export const getUserDetails = async (id: string): Promise<GHParsedUserDetails | null> => {
-  const res: GHUserDetails = await fetcherFn(API.DETAILS.ENDPOINT(id));
+  const res: GHUserDetails = await fetcherFn(API.DETAILS(id));
 
   if (res) {
     const { repos_url, ...userData } = extractUserData(res);
