@@ -33,9 +33,11 @@ export const FavoriteButton = ({ username }: FavoriteButtonProps) => {
     });
   };
 
+  const title = isFav ? 'Remove from favorites' : 'Add to favorites';
+
   return (
-    <IconButton color="primary" size="small" onClick={handleFavClick} disabled={isPending}>
-      <Tooltip title={isFav ? 'Remove from favorites' : 'Add to favorites'} placement="right" arrow>
+    <IconButton color="primary" size="small" onClick={handleFavClick} disabled={isPending} aria-label={title}>
+      <Tooltip title={title} placement="right" arrow>
         {isFav ? <StarIcon color="warning" /> : <StarBorderIcon color="warning" />}
       </Tooltip>
     </IconButton>

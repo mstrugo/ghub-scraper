@@ -11,12 +11,12 @@ export const UserCardHeader = ({ fullname, username, biography }: UserCardHeader
   return (
     <>
       {fullname && (
-        <Typography gutterBottom variant="h4" component="h1">
+        <Typography gutterBottom variant="h4" component="h2">
           <VisuallyHiddenText>Fullname:</VisuallyHiddenText>
           {fullname}
         </Typography>
       )}
-      <Typography variant="h5" component="h2" fontStyle="italic" gutterBottom>
+      <Typography variant="h5" component="h3" fontStyle="italic" gutterBottom>
         <VisuallyHiddenText>Username:</VisuallyHiddenText>
         {username}
       </Typography>

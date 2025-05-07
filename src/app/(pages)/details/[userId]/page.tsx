@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
+import { HeaderNavigation, NotFound, UserCard, UserRepositoriesList } from 'app/components';
 import { getUserDetails } from 'hooks/api/useGetUserDetails';
 import type { Metadata } from 'next';
-import { HeaderNavigation, NotFound, UserCard, UserRepositoriesList } from '~components';
 
 type UserDetailsPageProps = {
   params: Promise<{ userId: string }>;

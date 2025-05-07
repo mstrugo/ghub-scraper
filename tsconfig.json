@@ -10,9 +10,6 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "paths": {
-      "~components": ["app/components/index.ts"]
-    },
     "plugins": [
       {
         "name": "next"

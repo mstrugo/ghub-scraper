@@ -2,7 +2,7 @@
 
 import { Grid, Typography } from '@mui/material';
 import { UserContextProvider } from 'contexts/users';
-import { Search, UserListContainer } from '~components';
+import { Search, UserListContainer } from './components';
 
 const HomePage = () => (
   <UserContextProvider>

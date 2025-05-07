@@ -15,7 +15,7 @@ const config: Config = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: false,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
@@ -33,6 +33,8 @@ const config: Config = {
 
   // Adds Testing Librery to the Jest environment
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+
+  moduleDirectories: ['node_modules', 'src'],
 };
 
 export default createJestConfig(config);

@@ -1,6 +1,6 @@
 import { Box, Button, CircularProgress, Typography } from '@mui/material';
 import { useUserContext } from 'contexts/users';
-import { UserList } from '~components';
+import { UserList } from '../UserList';
 import { boxStyle } from './styles';
 
 export const UserListContainer = () => {

@@ -16,11 +16,9 @@ export const NotFound = () => {
       <Typography variant="h3" component="h2" gutterBottom>
         User not found
       </Typography>
-      <Link href="/" passHref>
-        <Button variant="contained" color="warning">
-          Go to the homepage
-        </Button>
-      </Link>
+      <Button variant="contained" color="warning" aria-label="Go to the homepage" LinkComponent={Link} href="/">
+        Go to the homepage
+      </Button>
     </Grid>
   );
 };
