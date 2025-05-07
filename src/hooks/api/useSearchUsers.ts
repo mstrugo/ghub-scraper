@@ -1,6 +1,6 @@
 import { API } from 'constants/api';
 import useSWRMutation from 'swr/mutation';
-import { searchFn } from 'utils';
+import { searchFn } from 'utils/fetcher';
 
 export const useSearchUsers = () => {
   const { data, error, isMutating, trigger } = useSWRMutation(API.SEARCH, searchFn);

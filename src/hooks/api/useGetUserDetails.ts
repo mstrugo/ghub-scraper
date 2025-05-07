@@ -1,7 +1,9 @@
 import { API } from 'constants/api';
 import type { GHUserDetails, GHUserRepositories } from 'types/github';
 import type { GHParsedUserDetails, ParsedRepositories } from 'types/userDetails';
-import { extractUserData, extractUserRepositories, fetcherFn } from 'utils';
+import { extractUserData } from 'utils/extractUserData';
+import { extractUserRepositories } from 'utils/extractUserRepositories';
+import { fetcherFn } from 'utils/fetcher';
 
 export const getUserDetails = async (id: string): Promise<GHParsedUserDetails | null> => {
   const res: GHUserDetails = await fetcherFn(API.DETAILS(id));

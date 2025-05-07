@@ -1,6 +1,6 @@
 import { PeopleRounded, PlaceOutlined, RestoreRounded } from '@mui/icons-material';
 import { List, ListItem, Typography } from '@mui/material';
-import { parseDate } from 'utils';
+import { parseDate } from 'utils/parseDate';
 import { VisuallyHiddenText } from '../VisuallyHiddenText';
 
 type UserCardContentProps = {

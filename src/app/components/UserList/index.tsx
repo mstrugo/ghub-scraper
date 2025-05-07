@@ -2,7 +2,7 @@
 
 import { List } from '@mui/material';
 import type { GHUserList } from 'types/github';
-import { generateProfileDetailsUrl } from 'utils';
+import { generateProfileDetailsUrl } from 'utils/generateProfileDetailsUrl';
 import { UserListItem } from '../UserListItem';
 import { listStyle } from './styles';
 

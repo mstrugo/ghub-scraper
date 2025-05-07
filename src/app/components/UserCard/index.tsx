@@ -1,6 +1,6 @@
 import { Card, CardActions, CardContent } from '@mui/material';
 import type { UserDetails } from 'types/userDetails';
-import { generateUserExternalLinks } from 'utils';
+import { generateUserExternalLinks } from 'utils/generateUserExternalLinks';
 import { UserCardActions } from '../UserCardActions';
 import { UserCardContent } from '../UserCardContent';
 import { UserCardHeader } from '../UserCardHeader';
