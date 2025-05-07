@@ -1,3 +1,5 @@
+'use client';
+
 import { useGetUsers } from 'hooks/api/useGetUsers';
 import { useFavorites } from 'hooks/useFavorites';
 import { useSearch } from 'hooks/useSearch';

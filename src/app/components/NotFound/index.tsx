@@ -1,9 +1,7 @@
-'use client';
-
 import { Button, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 
-const ErrorPage = () => {
+export const NotFound = () => {
   return (
     <Grid
       container
@@ -12,11 +10,11 @@ const ErrorPage = () => {
       justifyContent="center"
       alignItems="center"
       style={{ height: '100vh' }}>
-      <Typography variant="h2" component="h1" gutterBottom>
-        Something went wrong.
+      <Typography variant="h1" component="h1">
+        404!
       </Typography>
-      <Typography variant="body1" gutterBottom>
-        Please try again later.
+      <Typography variant="h3" component="h2" gutterBottom>
+        User not found
       </Typography>
       <Link href="/" passHref>
         <Button variant="contained" color="warning">
@@ -26,5 +24,3 @@ const ErrorPage = () => {
     </Grid>
   );
 };
-
-export default ErrorPage;

@@ -1,11 +1,22 @@
 import { API } from 'constants/api';
-import useSWRImmutable from 'swr/immutable';
-import { fetcherFn } from 'utils';
+import type { GHUserDetails, GHUserRepositories } from 'types/github';
+import type { GHParsedUserDetails, ParsedRepositories } from 'types/userDetails';
+import { extractUserData, extractUserRepositories, fetcherFn } from 'utils';
 
-export const useGetUserDetails = (id: string) => {
-  const { data, isLoading, error } = useSWRImmutable([API.DETAILS.KEY, API.DETAILS.ENDPOINT(id)], ([_key, endpoint]) =>
-    fetcherFn(endpoint),
-  );
+export const getUserDetails = async (id: string): Promise<GHParsedUserDetails | null> => {
+  const res: GHUserDetails = await fetcherFn(API.DETAILS.ENDPOINT(id));
 
-  return { data, isLoading, error };
+  if (res) {
+    const { repos_url, ...userData } = extractUserData(res);
+    let repositories: ParsedRepositories[] = [];
+
+    const repos: GHUserRepositories[] = await fetcherFn(repos_url);
+    if (repos.length > 0) {
+      repositories = extractUserRepositories(repos);
+    }
+
+    return { ...userData, repositories };
+  }
+
+  return null;
 };
