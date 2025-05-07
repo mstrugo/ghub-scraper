@@ -2,6 +2,8 @@ import { Theme } from '@mui/material';
 
 export const listItemStyle = ({ palette, shape }: Theme) => ({
   minWidth: 240,
+  maxWidth: 300,
+  height: 64,
   flex: 1,
   padding: 0,
   background: palette.grey[800],
