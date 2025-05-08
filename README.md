@@ -39,10 +39,10 @@ The following table shows the current test coverage for the project:
 
 | Metric         | Percentage |
 | -------------- | ---------- |
-| **Statements** | 73.5%      |
+| **Statements** | 77.6%      |
 | **Branches**   | 85.7%      |
 | **Functions**  | 78%        |
-| **Lines**      | 73.5%      |
+| **Lines**      | 77.6%      |
 
 To run tests and view the coverage report, use the following command:
 
