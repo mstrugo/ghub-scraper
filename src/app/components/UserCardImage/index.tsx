@@ -1,15 +1,26 @@
 import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
+import type { JSX } from 'react';
 import { FavoriteButton } from '../FavoriteButton';
 
 type UserCardImageProps = {
+  /** The URL of the user's avatar image. */
   src: string;
+  /** The alt text for the avatar image. */
   alt: string;
+  /** The username of the user. */
   username: string;
-  height?: number | string;
+  /** The height of the avatar image. Defaults to 240. */
+  height?: number;
 };
 
-export const UserCardImage = ({ src, alt, height = 240, username }: UserCardImageProps) => {
+/**
+ * A component to display the user's avatar image and favorite button.
+ *
+ * @param {UserCardImageProps} props - The props for the UserCardImage component.
+ * @returns {JSX.Element} The rendered UserCardImage component.
+ */
+export const UserCardImage = ({ src, alt, username, height = 240 }: UserCardImageProps): JSX.Element => {
   return (
     <>
       <Box

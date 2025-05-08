@@ -1,6 +1,11 @@
 import { Button, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 
+/**
+ * A component to display a 404 "User not found" message.
+ *
+ * @returns {JSX.Element} The rendered NotFound component.
+ */
 export const NotFound = () => {
   return (
     <Grid

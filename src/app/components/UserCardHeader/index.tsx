@@ -1,13 +1,23 @@
 import { Typography } from '@mui/material';
+import type { JSX } from 'react';
 import { VisuallyHiddenText } from '../VisuallyHiddenText';
 
 type UserCardHeaderProps = {
+  /** The username of the user. */
   username: string;
+  /** The full name of the user. */
   fullname: string | null;
+  /** The biography of the user. */
   biography: string | null;
 };
 
-export const UserCardHeader = ({ fullname, username, biography }: UserCardHeaderProps) => {
+/**
+ * A component to display the user's name, username, and biography.
+ *
+ * @param {UserCardHeaderProps} props - The props for the UserCardHeader component.
+ * @returns {JSX.Element} The rendered UserCardHeader component.
+ */
+export const UserCardHeader = ({ fullname, username, biography }: UserCardHeaderProps): JSX.Element => {
   return (
     <>
       {fullname && (

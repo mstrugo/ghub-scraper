@@ -1,9 +1,15 @@
 import { Box, Button, CircularProgress, Typography } from '@mui/material';
 import { useUserContext } from 'contexts/users';
+import type { JSX } from 'react';
 import { UserList } from '../UserList';
 import { boxStyle } from './styles';
 
-export const UserListContainer = () => {
+/**
+ * A container component to manage and display the user list.
+ *
+ * @returns {JSX.Element} The rendered UserListContainer component.
+ */
+export const UserListContainer = (): JSX.Element => {
   const { initialData, isLoadingInitialData, isSearchPerformed, isSearching, searchResults, resetSearch } =
     useUserContext();
 

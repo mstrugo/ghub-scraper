@@ -4,9 +4,14 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box, IconButton, TextField, Tooltip } from '@mui/material';
 import { useUserContext } from 'contexts/users';
-import { useState, type FormEvent } from 'react';
+import { useState, type FormEvent, type JSX } from 'react';
 
-export const Search = () => {
+/**
+ * A search component to allow users to search for GitHub profiles.
+ *
+ * @returns {JSX.Element} The rendered Search component.
+ */
+export const Search = (): JSX.Element => {
   const { triggerSearch, isSearchPerformed, resetSearch } = useUserContext();
   const [term, setTerm] = useState('');
 

@@ -4,12 +4,22 @@ import { parseDate } from 'utils/parseDate';
 import { VisuallyHiddenText } from '../VisuallyHiddenText';
 
 type UserCardContentProps = {
+  /** The user's location. */
   location?: string | null;
+  /** The number of followers the user has. */
   followers?: number;
+  /** The number of users the user is following. */
   following?: number;
+  /** The date the user registered on GitHub. */
   registrationDate?: string;
 };
 
+/**
+ * A component to display additional user details such as location, followers, and registration date.
+ *
+ * @param {UserCardContentProps} props - The props for the UserCardContent component.
+ * @returns {JSX.Element} The rendered UserCardContent component.
+ */
 export const UserCardContent = ({ location, followers, following, registrationDate }: UserCardContentProps) => {
   return (
     <List disablePadding>

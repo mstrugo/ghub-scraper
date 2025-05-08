@@ -7,9 +7,16 @@ import { handleFavUser, isFavUser } from 'actions/favorite';
 import { useEffect, useState, useTransition } from 'react';
 
 type FavoriteButtonProps = {
+  /** The username of the GitHub user. */
   username: string;
 };
 
+/**
+ * A button component to toggle a user's favorite status.
+ *
+ * @param {FavoriteButtonProps} props - The props for the FavoriteButton component.
+ * @returns {JSX.Element} The rendered FavoriteButton component.
+ */
 export const FavoriteButton = ({ username }: FavoriteButtonProps) => {
   const [isPending, startTransition] = useTransition();
   const [isFav, setIsFav] = useState(false);
@@ -24,6 +31,11 @@ export const FavoriteButton = ({ username }: FavoriteButtonProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /**
+   * Handles the click event to toggle the favorite status.
+   *
+   * @param {React.MouseEvent} e - The click event.
+   */
   const handleFavClick = async (e: React.MouseEvent) => {
     e.preventDefault();
 

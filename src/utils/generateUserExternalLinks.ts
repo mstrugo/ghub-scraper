@@ -15,6 +15,12 @@ const LINK_CONFIG = {
   }),
 };
 
+/**
+ * Generates external links for a user based on the provided URLs.
+ *
+ * @param {UserLinksToParse} urls - The URLs to parse into external links.
+ * @returns {UserExternalLinks[]} The generated external links.
+ */
 export const generateUserExternalLinks = (urls: UserLinksToParse): UserExternalLinks[] => {
   const keys = Object.keys(urls) as UserLinks[];
 

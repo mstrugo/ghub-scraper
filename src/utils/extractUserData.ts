@@ -1,6 +1,12 @@
 import { GHUserDetails } from 'types/github';
 import type { ExtractedUserDetails } from 'types/userDetails';
 
+/**
+ * Extracts relevant user details from the GitHub API response.
+ *
+ * @param {GHUserDetails} data - The raw user details from the GitHub API.
+ * @returns {ExtractedUserDetails} The extracted user details.
+ */
 export const extractUserData = (data: GHUserDetails): ExtractedUserDetails => {
   const {
     login,
