@@ -1,6 +1,6 @@
 {
   "name": "ghub-scraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "mstrugo",
     "email": "mariano.strugo@gmail.com"
@@ -24,6 +24,8 @@
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@mui/material-nextjs": "^7.0.2",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

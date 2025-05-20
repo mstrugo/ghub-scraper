@@ -2,6 +2,8 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import { ThemeProvider } from '@mui/material/styles';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { DEFAULT_LANGUAGE } from 'constants/lang';
 import { theme } from 'constants/theme';
 import type { Metadata } from 'next';
@@ -37,6 +39,8 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             </Grid>
           </ThemeProvider>
         </AppRouterCacheProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
